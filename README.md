@@ -1,9 +1,8 @@
 
+Implementation of Promises/A and some other stuff (always-async, returning-a-promise).
 
 [![Build Status](https://secure.travis-ci.org/nilclass/promising.png)](http://travis-ci.org/nilclass/promising)
 
-
-Implementation of Promises/A and some other stuff (always-async, returning-a-promise).
 
 ## Usage:
 
