@@ -1,6 +1,18 @@
 {
   "name": "promising",
   "version": "0.0.1",
+  "private": false,
+  "author": "Niklas Cathor <nil.niklas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nilclass/promising.git"
+  },
+  "homepage": "http://github.com/nilclass/promising",
+  "author": {
+    "name": "Niklas Cathor",
+    "email": "nil.niklas@gmail.com"
+  },
   "devDependencies": {
     "promise-tests": "*"
   },
