@@ -1,0 +1,10 @@
+{
+  "name": "promising",
+  "version": "0.0.1",
+  "devDependencies": {
+    "promise-tests": "*"
+  },
+  "scripts": {
+    "test": "promise-tests promises-a test/promising-adapter"
+  }
+}
