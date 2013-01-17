@@ -9,14 +9,11 @@
     "url": "git://github.com/nilclass/promising.git"
   },
   "homepage": "http://github.com/nilclass/promising",
-  "author": {
-    "name": "Niklas Cathor",
-    "email": "nil.niklas@gmail.com"
-  },
   "devDependencies": {
     "promise-tests": "*"
   },
   "scripts": {
     "test": "promise-tests promises-a test/promising-adapter"
-  }
+  },
+  "main": "src/promising.js"
 }
