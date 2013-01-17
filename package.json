@@ -1,10 +1,19 @@
 {
   "name": "promising",
   "version": "0.0.1",
+  "private": false,
+  "author": "Niklas Cathor <nil.niklas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nilclass/promising.git"
+  },
+  "homepage": "http://github.com/nilclass/promising",
   "devDependencies": {
     "promise-tests": "*"
   },
   "scripts": {
     "test": "promise-tests promises-a test/promising-adapter"
-  }
+  },
+  "main": "src/promising.js"
 }
