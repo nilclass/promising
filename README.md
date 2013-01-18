@@ -36,5 +36,17 @@ Rejecting a promise:
       return promise;
     }
 
+Most conveniently:
+
+    function myAsyncFunction() {
+      return promising(function(promise) {
+        promise.fulfill();
+        // or
+        promise.reject('foo');
+        // or
+        throw 'foo'; // <<< equals rejecting
+      });
+    });
+
 That's about it.
 

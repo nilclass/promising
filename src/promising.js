@@ -1,4 +1,16 @@
-function getPromise() {
+function getPromise(builder) {
+  var promise;
+
+  if(typeof(builder) === 'function') {
+    setTimeout(function() {
+      try {
+        builder(promise);
+      } catch(e) {
+        promise.reject(e);
+      }
+    }, 0);
+  }
+
   var consumers = [], success, result;
 
   function notifyConsumer(consumer) {
@@ -58,7 +70,7 @@ function getPromise() {
     }, 0);
   }
 
-  return {
+  promise = {
 
     then: function(fulfilled, rejected) {
       var consumer = {
@@ -87,6 +99,8 @@ function getPromise() {
     }
     
   };
+
+  return promise;
 };
 
 module.exports = getPromise;
