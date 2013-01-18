@@ -1,6 +1,6 @@
 {
   "name": "promising",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "author": "Niklas Cathor <nil.niklas@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "promise-tests": "*"
   },
   "scripts": {
-    "test": "promise-tests promises-a test/promising-adapter"
+    "test": "node test/run.js"
   },
   "main": "src/promising.js"
 }

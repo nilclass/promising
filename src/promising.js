@@ -14,7 +14,7 @@ function getPromise() {
       } else {
         nextValue = result;
       }
-      if(nextValue && typeof(nextValue.then) === 'function') {
+      if(nextValue[0] && typeof(nextValue[0].then) === 'function') {
         nextValue[0].then(consumer.promise.fulfill, consumer.promise.reject);
       } else {
         consumer.promise.fulfill.apply(null, nextValue);
