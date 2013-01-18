@@ -1,5 +1,5 @@
 
-Implementation of [Promises/A](http://promises-aplus.github.com/promises-spec/)
+Implementation of [Promises/A+](http://promises-aplus.github.com/promises-spec/)
 
 [![Build Status](https://secure.travis-ci.org/nilclass/promising.png)](http://travis-ci.org/nilclass/promising)
 
