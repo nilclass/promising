@@ -1,6 +1,6 @@
 {
   "name": "promising",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "author": "Niklas Cathor <nil.niklas@gmail.com>",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "homepage": "http://github.com/nilclass/promising",
   "devDependencies": {
-    "promise-tests": "*"
+    "promises-aplus-tests": "*"
   },
   "scripts": {
     "test": "node test/run.js"

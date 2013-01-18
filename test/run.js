@@ -1,8 +1,7 @@
 
-var promiseTests = require('promise-tests');
+var promiseTests = require('promises-aplus-tests');
 var adapter = require('./promising-adapter');
 
-promiseTests(adapter, ['promises-a', 'always-async', 'returning-a-promise'],
-             function() {
-               console.log("Tests all done.");
-             });
+promiseTests(adapter, function() {
+  console.log("Tests all done.");
+});

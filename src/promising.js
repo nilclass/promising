@@ -28,12 +28,10 @@ function getPromise() {
           consumer.promise.reject(exc);
           return;
         }
-        if(typeof(ret) !== 'undefined') {
-          if(typeof(ret.then) === 'function') {
-            ret.then(consumer.promise.fulfill, consumer.promise.reject);
-          } else {
-            consumer.promise.fulfill(ret);
-          }
+        if(ret && typeof(ret.then) === 'function') {
+          ret.then(consumer.promise.fulfill, consumer.promise.reject);
+        } else {
+          consumer.promise.fulfill(ret);
         }
       } else {
         consumer.promise.reject.apply(null, result);
@@ -43,7 +41,8 @@ function getPromise() {
 
   function resolve(succ, res) {
     if(result) {
-      throw new Error("Can't resolve promise, already resolved!");
+      console.log("WARNING: Can't resolve promise, already resolved!");
+      return;
     }
     success = succ;
     result = Array.prototype.slice.call(res);
@@ -63,8 +62,8 @@ function getPromise() {
 
     then: function(fulfilled, rejected) {
       var consumer = {
-        fulfilled: fulfilled,
-        rejected: rejected,
+        fulfilled: typeof(fulfilled) === 'function' ? fulfilled : undefined,
+        rejected: typeof(rejected) === 'function' ? rejected : undefined,
         promise: getPromise()
       };
       if(result) {
