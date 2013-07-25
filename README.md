@@ -50,3 +50,7 @@ Most conveniently:
 
 That's about it.
 
+## Who uses it?
+
+* [sockethub](https://github.com/sockethub/sockethub)
+* [sockethub-client](https://github.com/sockethub/sockethub-client)
