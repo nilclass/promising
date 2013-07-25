@@ -61,3 +61,4 @@ That's about it.
 
 * [sockethub](https://github.com/sockethub/sockethub)
 * [sockethub-client](https://github.com/sockethub/sockethub-client)
+* [remotestorage.js](https://github.com/remotestorage/remotestorage.js)
