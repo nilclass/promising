@@ -59,10 +59,13 @@
       }
       success = succ;
       result = Array.prototype.slice.call(res);
+      if(! success) {
+        var stack = new Error('').stack;
+      }
       setTimeout(function() {
         var cl = consumers.length;
         if(cl === 0 && (! success)) {
-          console.error("Possibly uncaught error: ", result);
+          console.error("Possibly uncaught error: ", result, stack);
         }
         for(var i=0;i<cl;i++) {
           notifyConsumer(consumers[i]);
